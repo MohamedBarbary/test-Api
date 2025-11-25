@@ -12,7 +12,10 @@ const jobRoutes = require("./routes/jobRoute");
 const app = express();
 
 // CORS - allow both backend and frontend origins
-const allowedOrigins = ["https://test-api-9gkd.vercel.app"];
+const allowedOrigins = [
+  "https://test-api-9gkd.vercel.app",
+  "http://127.0.0.1:5500",
+];
 app.use(
   cors({
     origin: function (origin, callback) {
@@ -37,7 +40,7 @@ app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/jobs", jobRoutes);
 
 app.get("/", (req, res) => {
-  res.send(process.env.MONGO_URL);
+  res.send("Api is running");
 });
 
 // Global error handler
