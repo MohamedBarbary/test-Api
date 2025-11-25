@@ -12,7 +12,7 @@ const jobRoutes = require("./routes/jobRoute");
 const app = express();
 
 // CORS - allow both backend and frontend origins
-const allowedOrigins = ["https://test-api-9gkd.vercel.app"];
+const allowedOrigins = ["https://test-api1-henna.vercel.app"];
 app.use(
   cors({
     origin: function (origin, callback) {
@@ -46,9 +46,8 @@ app.use((err, req, res, next) => {
   res.status(500).json({ status: "error", message: "Something went wrong!" });
 });
 
-// MongoDB connection
 mongoose
-  .connect(process.env.MONGO_URL || "mongodb://127.0.0.1:27017/jobsApp")
+  .connect(process.env.MONGO_URL)
   .then(() => console.log("Connected to MongoDB 🔥"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
