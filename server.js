@@ -15,6 +15,7 @@ const app = express();
 const allowedOrigins = [
   "https://test-api-9gkd.vercel.app",
   "http://127.0.0.1:5500",
+  "https://test-app-eta-ruby.vercel.app",
 ];
 app.use(
   cors({
