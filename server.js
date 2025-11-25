@@ -12,7 +12,7 @@ const jobRoutes = require("./routes/jobRoute");
 const app = express();
 
 // CORS - allow both backend and frontend origins
-const allowedOrigins = ["https://test-api-mocha-three.vercel.app"];
+const allowedOrigins = ["https://test-api1-henna.vercel.app"];
 app.use(
   cors({
     origin: function (origin, callback) {
