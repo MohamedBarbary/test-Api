@@ -100,8 +100,8 @@ exports.login = async (req, res) => {
     // Set cookie
     res.cookie("jwt", token, {
       httpOnly: true,
-      secure: false, // true in https
-      sameSite: "lax",
+      secure: true, // true in https
+      sameSite: "none",
       maxAge: 30 * 24 * 60 * 60 * 1000,
     });
 
