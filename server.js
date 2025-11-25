@@ -28,7 +28,6 @@ app.use(
 app.use(express.json());
 app.use(cookieParser());
 
-// Debug cookies
 app.use((req, res, next) => {
   console.log("Cookies:", req.cookies);
   next();
