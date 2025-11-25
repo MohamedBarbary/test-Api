@@ -37,8 +37,7 @@ app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/jobs", jobRoutes);
 
 app.get("/", (req, res) => {
-  res.send("API is running...");
-  res.send("no more" || process.env.MONGO_URL);
+  res.send(process.env.MONGO_URL);
 });
 
 // Global error handler
